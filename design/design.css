@@ -5,3 +5,9 @@
     line-height: 1.5;
     font-size: 12pt;
 }
+
+@page {
+    @bottom {
+        content: var(--page-number)
+    }
+}

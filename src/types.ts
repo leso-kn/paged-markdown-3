@@ -12,3 +12,10 @@ declare global {
 	}
   }
   export {};
+
+declare global {
+	interface NodeListOf<TNode extends Node> {
+	  [Symbol.iterator](): Iterator<TNode>;
+	}
+  }
+  export {};

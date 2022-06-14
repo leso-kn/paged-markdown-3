@@ -30,6 +30,23 @@ body {
     margin-bottom: 1.5cm;
 }
 
+/* Page Numbers */
+.pagedjs_page[pnum-reset]
+{
+    counter-set: page 1;
+}
+
+.pagedjs_page[pnum-style=decimal]
+{
+    --page-number: counter(page) !important;
+}
+
+.pagedjs_page[pnum-style=roman]
+{
+    --page-number: counter(page, upper-roman) !important;
+}
+
+/* Manual Page Break */
 pb
 {
     break-after: page;

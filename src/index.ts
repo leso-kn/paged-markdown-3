@@ -30,6 +30,24 @@ let render = async () =>
 	// Paginate
 	let flow = await paged.preview(contents, [], preview);
 
+	// Page Numbers
+	let pnum_style = 'none';
+	for (let page of preview.querySelectorAll('.pagedjs_page'))
+	{
+		let pnum_def = page.getElementsByTagName('pnums')[0];
+		if (pnum_def)
+		{
+			pnum_style = pnum_def.getAttribute('s');
+
+			if (pnum_def.hasAttribute('reset'))
+			{
+				page.setAttribute('pnum-reset', '');
+			}
+		}
+
+		page.setAttribute('pnum-style', pnum_style);
+	}
+
 	console.log("Rendered", flow.total, "pages.");
 	observeLock = false;
 }
