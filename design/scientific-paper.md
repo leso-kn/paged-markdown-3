@@ -1,4 +1,6 @@
-nonum
+---
+Metadata: Oh Yeah!
+---
 
 # Main Headline
 
@@ -19,6 +21,14 @@ Pages starting from
 0123
 
 The zero (0) before the `123`-directive signals we want to reset page counting.
+
+other
+
+contents
+
+gone
+
+waaaay down
 
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 
