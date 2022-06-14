@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js",
+    "dev": "node build.js -w"
   },
   "repository": {
     "type": "git",
