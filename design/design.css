@@ -1,3 +1,4 @@
+/* Page Layout */
 @page
 {
     margin: 2.5cm 3.5cm 2.0cm 2.5cm;
@@ -6,8 +7,17 @@
     font-size: 12pt;
 }
 
+/* Footer Information */
 @page {
-    @bottom {
+    @bottom-center {
         content: var(--page-number)
     }
+}
+
+/* Two-Pane */
+col-2
+{
+    display: block;
+    columns: 2;
+    column-gap: 2em;
 }

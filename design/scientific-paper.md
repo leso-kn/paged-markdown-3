@@ -6,7 +6,36 @@ Metadata: Oh Yeah!
 
 ## Sub Headline
 
+<col-2>
+
 Let's have some very long block text on the front page, so we can test text alignment and justification. That everything looks good and such!
+
+![](https://1.bp.blogspot.com/-BSpoASO5cQQ/WN1lox2QpYI/AAAAAAAAfus/SxntT47ntak7mXmdKSVTiCZOXUlgMayDwCLcB/s1600/duckduckgo-logo-wordmark4-1920.png)
+
+There's our scientific logo.
+
+And it all looks so nice and wonderful! It's almost unbelievable!!
+
+Now we're adding even more text. Let's see where that will lead us. We're going on. And continuing. Soon we should be getting somewhere. Let's see here.
+
+Wonderful, exacly as it's supposed to look like!
+Great!
+
+Yes.
+
+</col-2>
+
+The non-dual pane text continues here. As we can see, we have one regular paragraph distance to the dual-paned text above, which gives it just enough space to have some distance.
+
+![](https://www.climatesignals.org/sites/default/files/resources/numb_of_world_nat_cats_80-16.gif)
+
+We can see, that the logo now uses the full width, unlike above, where it only used the column width.
+
+<col-2>
+
+Let's have some more dual-paned text. We want it to be split into two equal columns and then see, how it handles vanishing page space. Will it break to the next page? If yes, when will it do so? Let's have a look at what will happen, in a very short moment, like now! It seems like it worked. Contents are now moved to the next page.
+
+</col-2>
 
 --
 XIV
