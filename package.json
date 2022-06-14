@@ -1,0 +1,34 @@
+{
+  "name": "paged-markdown-3",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leso-kn/paged-markdown.git"
+  },
+  "keywords": [
+    "markdown",
+    "pdf",
+    "science",
+    "paper"
+  ],
+  "author": "Lesosoftware",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leso-kn/paged-markdown/issues"
+  },
+  "homepage": "https://github.com/leso-kn/paged-markdown#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.183",
+    "@types/node": "^17.0.33",
+    "md5-file": "^5.0.0"
+  },
+  "dependencies": {
+    "pagedjs": "^0.3.1"
+  }
+}
