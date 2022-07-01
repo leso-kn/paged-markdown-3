@@ -1,4 +1,4 @@
-.markdown-body { display: none; }
+body > :not(.pmd-preview) { display: none; }
 
 html { overflow-x: hidden; }
 html, body {
@@ -8,26 +8,18 @@ html, body {
 body {
     background-color: #7771 !important;
     transform-origin: left top;
+    width: var(--pagedjs-width);
+
     zoom: calc(var(--zoom-factor));
-    width: calc(210mm);
 }
 
 .pagedjs_page {
     overflow: hidden;
     background-color: var(--vscode-editor-background);
-    border: 1px solid #7777;
-
-    /* A4 */
-    width: 210mm;
-    height: 297mm;
 
     /* Typography */
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
-
-    /* Preview Style */
-    box-shadow: 0 .5cm 1cm #0007;
-    margin-bottom: 1.5cm;
 }
 
 /* Page Numbers */

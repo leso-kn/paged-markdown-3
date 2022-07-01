@@ -1,0 +1,15 @@
+@media screen {
+
+    /* Preview Style */
+    .pagedjs_page {
+        border: 1px solid #7777;
+        box-shadow: 0 .5cm 1cm #0007;
+        margin-bottom: 1.5cm;
+    }
+}
+
+@media print {
+
+    /* PDF Style */
+    body { --zoom-factor: 1 !important; }
+}

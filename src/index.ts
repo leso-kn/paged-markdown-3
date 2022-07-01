@@ -8,7 +8,11 @@ let observeLock = true;
 
 let markdown_input = document.body.children[0];
 let preview = document.createElement('div');
+	preview.classList.add('pmd-preview');
     document.body.appendChild(preview);
+
+// Support Browser Preview
+if (!markdown_input.classList.contains('markdown-body')) { markdown_input = document.body; }
 
 //
 
@@ -57,7 +61,25 @@ let resize = () => {
 	document.body.style.setProperty('--zoom-factor', zf.toString());
 }
 
+// Patch Polisher: Allow user-style caching
+import baseStyles from 'pagedjs/src/polisher/base'
+paged.polisher.setup = function() {
+
+	if (this.styleSheet) return this.styleSheet;
+
+	this.base = this.insert(baseStyles);
+	this.styleEl = document.createElement("style");
+	document.head.appendChild(this.styleEl);
+	this.styleSheet = this.styleEl.sheet;
+	return this.styleSheet;
+}
+
 // CSS
+let previewStyle = document.createElement('link');
+previewStyle.rel = 'stylesheet';
+previewStyle.href = 'dist/preview.css';
+document.head.appendChild(previewStyle);
+
 paged.polisher.setup();
 paged.handlers = paged.initializeHandlers();
 paged.polisher.add(...['dist/logic.css', 'design.css']).then(() =>
