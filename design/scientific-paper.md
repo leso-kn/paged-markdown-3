@@ -33,14 +33,14 @@ We can see, that the logo now uses the full width, unlike above, where it only u
 
 <col-2>
 
-Let's have some more dual-paned text. We want it to be split into two equal columns and then see, how it handles vanishing page space. Will it break to the next page? If yes, when will it do so? Let's have a look at what will happen, in a very short moment, like now! It seems like it worked. Contents are now moved to the next page.
+Let's have some more dual-paned text. The text must be rather long, since we want to trigger a manual page break in a moment. Furthermore, we want the text to be equally distributed. Meaning it should be split into two equal columns and then see, how it handles vanishing page space. Will it break to the next page? If yes, when will it do so? Without further distractions and making assumptions on the behaviour, let's have a look at what will happen, in a very short moment, like now! It seems like it worked. Contents are now moved to the next page.
 
 </col-2>
 
 --
 XIV
 
-* [Table of contents]()
+* [Table of contents](#late-headline)
 
 Automagic page numbers behind entries in table of contents, based on target anchors.
 
@@ -60,6 +60,8 @@ gone
 waaaay down
 
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+# Late Headline
 
 eeeeeeeeeeeeeeeeee
 

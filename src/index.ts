@@ -31,6 +31,12 @@ let render = async () =>
 		{ el.classList.remove('code-line'); }
 	}
 
+	// Move Headline IDs
+	for (let el of markdown_input.querySelectorAll('h1, h2, h3, h4, h5, h6, h7, h8, h9'))
+	{
+		el.removeAttribute('id');
+	}
+
 	// Paginate
 	let flow = await paged.preview(contents, [], preview);
 
