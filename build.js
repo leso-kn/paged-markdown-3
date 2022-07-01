@@ -1,4 +1,4 @@
-const { tasks, log, debug } = require('./src/buildtool');
+const { tasks, log, debug } = require('buildtool.js');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
