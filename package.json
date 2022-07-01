@@ -32,6 +32,6 @@
     "sass": "^1.52.3"
   },
   "dependencies": {
-    "pagedjs": "^0.3.1"
+    "pagedjs": "^0.3.5"
   }
 }
