@@ -2,6 +2,21 @@
 Metadata: Oh Yeah!
 ---
 
+Title Page
+
+--
+XIV
+
+# Table Of Contents
+
+- [Table Of Contents](#table-of-contents)
+- [Main Headline](#main-headline)
+  - [Sub Headline](#sub-headline)
+- [Late Headline](#late-headline)
+
+--
+0123
+
 # Main Headline
 
 ## Sub Headline
@@ -39,9 +54,6 @@ Let's have some more dual-paned text. The text must be rather long, since we wan
 
 -- ¹ This is a test for a footnote.
    ² Another Footnote (wow :D) it is much amazing.
-XIV
-
-* [Table of contents](#late-headline)
 
 Automagic page numbers behind entries in table of contents, based on target anchors.
 

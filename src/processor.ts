@@ -1,4 +1,5 @@
 import { processFootnoteReferences, processFootnotes } from "./subprocessors/footnotes";
+import { processTablesOfContents } from "./subprocessors/toc";
 
 function processPageBreak(paragraphEl, direct = false, dom: HTMLElement)
 {
@@ -81,11 +82,12 @@ let parse = (contents: Element): Element =>
 {
     let dom: HTMLElement = contents.cloneNode(true) as any;
     processTextRuns(dom);
+    processTablesOfContents(dom);
 
     let i = 0;
     for (let p of dom.getElementsByTagName('p'))
     {
-        processPageBreak(p, i == 0, dom);
+        processPageBreak(p, i == 0 && !p.previousElementSibling, dom);
         i++;
     }
 

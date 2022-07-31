@@ -49,3 +49,46 @@ ftn
 {
     float: footnote;
 }
+
+/*
+ *  Table Of Contents
+ */
+
+ul.toc
+{
+    line-height: 2em;
+    display:inline-block;
+    overflow:hidden;
+    width: 100%;
+
+    padding-left: 0;
+}
+
+ul.toc li
+{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+ul.toc ul
+{
+    order: 4;
+    flex-basis: 100%;
+}
+
+ul.toc li pn
+{
+    order: 3;
+}
+
+ul.toc li:after
+{
+    content: '';
+    border-bottom: 1.5px dotted;
+    border-bottom-color: #aaa;
+    flex-grow: 1;
+    order: 2;
+    height: 1.3em;
+    margin: 0 .5em;
+    min-width: 1em;
+}

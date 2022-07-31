@@ -1,5 +1,6 @@
 import { Previewer } from 'pagedjs';
 import { parse } from './processor';
+import { postProcessTablesOfContents } from './subprocessors/toc';
 
 let paged = new Previewer();
 let observeLock = true;
@@ -42,8 +43,10 @@ let render = async () =>
 
 	// Page Numbers
 	let pnum_style = 'none';
+	let i = 0;
 	for (let page of preview.querySelectorAll('.pagedjs_page'))
 	{
+		i++;
 		let pnum_def = page.getElementsByTagName('pnums')[0];
 		if (pnum_def)
 		{
@@ -52,11 +55,15 @@ let render = async () =>
 			if (pnum_def.hasAttribute('reset'))
 			{
 				page.setAttribute('pnum-reset', '');
+				i = 1;
 			}
 		}
 
 		page.setAttribute('pnum-style', pnum_style);
+		page.setAttribute('pnum-computed', i.toString());
 	}
+
+	await postProcessTablesOfContents(preview);
 
 	console.log("Rendered", flow.total, "pages.");
 	observeLock = false;
