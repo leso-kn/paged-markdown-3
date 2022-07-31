@@ -8,7 +8,7 @@ let sass = require('sass');
 tasks
 ({
     // TypeScript
-    'src/*.ts': [ 'dist/paged.js', async (src, dest) =>
+    'src/**.ts': [ 'dist/paged.js', async (src, dest) =>
     {
         log('tsc', dest);
 
