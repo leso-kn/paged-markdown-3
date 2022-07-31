@@ -22,10 +22,82 @@
     }
 }
 
+h1:not(:first-of-type)
+{
+    margin-top: 1cm;
+}
+
+a[href]
+{
+    color: #295;
+}
+
+.caption
+{
+    color: gray;
+}
+
 /* Two-Pane */
 col-2
 {
     display: block;
     columns: 2;
     column-gap: 2em;
+}
+
+/* Front Page */
+.pagedjs_page:nth-child(1) .pagedjs_page_content > div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.pagedjs_page:nth-child(1) img
+{
+    display: block;
+    margin: 0 auto;
+    width: 3.5cm;
+}
+
+.pagedjs_page:nth-child(1) pre
+{
+    background: none;
+    text-align: center;
+    white-space: pre-line;
+
+    margin-top: 3cm;
+    flex-grow: 1;
+}
+
+.pagedjs_page:nth-child(1) pre::first-line
+{
+    font-size: 1.2em;
+    text-decoration-line: underline;
+    text-decoration-color: rgba(127, 127, 127, 0.36);
+}
+
+.pagedjs_page:nth-child(1) pre code
+{
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 1.7em;
+    line-height: 1.5;
+}
+
+.pagedjs_page:nth-child(1) blockquote
+{
+    background: none;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 2cm;
+
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.pagedjs_page:nth-child(1) blockquote p
+{
+    white-space: pre;
+    margin: .5em 0;
 }

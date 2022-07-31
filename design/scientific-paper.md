@@ -2,7 +2,20 @@
 Metadata: Oh Yeah!
 ---
 
-Title Page
+![](https://www.digitalmeetsculture.net/wp-content/uploads/2014/06/opensource-logo.png)
+
+      An Amazingly Scientific Paper
+
+    here is some data about the paper
+           And even more data!
+
+        This is like a cinematic
+          headline right there
+
+>  Author:		Lesosoftware
+>  Semester:	1
+>  Mentor:		Prof. Adam Bennet
+>  Finalized:	August 5. 2022
 
 --
 XIV
@@ -10,9 +23,15 @@ XIV
 # Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
+- [Table Of Figures](#table-of-figures)
 - [Main Headline](#main-headline)
   - [Sub Headline](#sub-headline)
 - [Late Headline](#late-headline)
+
+# Table Of Figures
+
+- [Figure 1](#figure-1)
+- [Figure 2](#figure-2)
 
 --
 0123
@@ -25,7 +44,7 @@ XIV
 
 Let's have some very long block text on the front page, so we can test text alignment and justification. That everything looks good and such!
 
-![](https://1.bp.blogspot.com/-BSpoASO5cQQ/WN1lox2QpYI/AAAAAAAAfus/SxntT47ntak7mXmdKSVTiCZOXUlgMayDwCLcB/s1600/duckduckgo-logo-wordmark4-1920.png)
+![Figure 1](https://1.bp.blogspot.com/-BSpoASO5cQQ/WN1lox2QpYI/AAAAAAAAfus/SxntT47ntak7mXmdKSVTiCZOXUlgMayDwCLcB/s1600/duckduckgo-logo-wordmark4-1920.png)
 
 There's our scientific logo.
 
@@ -42,7 +61,7 @@ Yes.
 
 The non-dual pane text continues here. As we can see, we have one regular paragraph distance to the dual-paned text above, which gives it just enough space to have some distance.
 
-![](https://www.climatesignals.org/sites/default/files/resources/numb_of_world_nat_cats_80-16.gif)
+![Figure 2](https://www.climatesignals.org/sites/default/files/resources/numb_of_world_nat_cats_80-16.gif)
 
 We can see¹, that the logo² now uses the full width, unlike above, where it only used the column width.
 
