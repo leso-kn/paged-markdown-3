@@ -29,7 +29,7 @@ The non-dual pane text continues here. As we can see, we have one regular paragr
 
 ![](https://www.climatesignals.org/sites/default/files/resources/numb_of_world_nat_cats_80-16.gif)
 
-We can see, that the logo now uses the full width, unlike above, where it only used the column width.
+We can see¹, that the logo² now uses the full width, unlike above, where it only used the column width.
 
 <col-2>
 
@@ -37,7 +37,8 @@ Let's have some more dual-paned text. The text must be rather long, since we wan
 
 </col-2>
 
---
+-- ¹ This is a test for a footnote.
+   ² Another Footnote (wow :D) it is much amazing.
 XIV
 
 * [Table of contents](#late-headline)

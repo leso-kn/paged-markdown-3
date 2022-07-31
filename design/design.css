@@ -13,6 +13,13 @@
     @bottom-center {
         content: var(--page-number)
     }
+
+    @footnote {
+        border-top: 1px solid rgba(127, 127, 127, 0.36);
+        margin-top: 1mm;
+        padding-top: 1mm;
+        float: bottom;
+    }
 }
 
 /* Two-Pane */

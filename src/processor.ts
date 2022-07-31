@@ -1,7 +1,6 @@
+import { processFootnoteReferences, processFootnotes } from "./subprocessors/footnotes";
 
-const footNoteNumbers = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-
-function processPageBreak(paragraphEl, direct = false)
+function processPageBreak(paragraphEl, direct = false, dom: HTMLElement)
 {
     if (!direct
      && !paragraphEl.innerHTML.trim().startsWith('-- ')
@@ -14,39 +13,18 @@ function processPageBreak(paragraphEl, direct = false)
 
     let pb = null;
     let node = null;
-    let option = direct
-               ? paragraphEl.innerHTML
-               : paragraphEl.innerHTML.length > 3 && paragraphEl.innerHTML.substr(3);
+    let options = [direct
+                ? paragraphEl.innerHTML
+                : paragraphEl.innerHTML.length > 3 && paragraphEl.innerHTML.substr(3)];
 
     if (!direct)
     {
         // Inject page break
         pb = document.createElement('pb');
-        let footnotes = '';
-
-        while (option && footNoteNumbers.indexOf(option.trim()[0]) >= 0)
-        {
-            // Foot Note
-            let footnoteEnd = option.indexOf('\n');
-            if (footnoteEnd < 0) { footnoteEnd = option.length; }
-
-            footnotes += option.substr(0, footnoteEnd);
-
-            if (footnoteEnd < option.length - 1)
-            { option = option.substr(footnoteEnd + 1); }
-            else
-            { option = null; }
-        }
-
-        if (footnotes.length > 0)
-        {
-            let foot = document.createElement('foot');
-            foot.innerHTML = footnotes;
-            pb.appendChild(foot);
-        }
+        processFootnotes(dom, options);
     }
 
-    switch (option)
+    switch (options[0])
     {
         // Page numbers (reset counter)
         case '0123':
@@ -89,14 +67,25 @@ function processPageBreak(paragraphEl, direct = false)
     }
 }
 
+function processTextRuns(dom: HTMLElement)
+{
+    let textRuns = Array.from(dom.querySelectorAll('*')).filter(item => item.textContent.length !== 0)
+    for (let r of textRuns)
+    {
+        let text = r.textContent;
+        processFootnoteReferences(r, text);
+    }
+}
+
 let parse = (contents: Element): Element =>
 {
     let dom: HTMLElement = contents.cloneNode(true) as any;
+    processTextRuns(dom);
 
     let i = 0;
     for (let p of dom.getElementsByTagName('p'))
     {
-        processPageBreak(p, i == 0);
+        processPageBreak(p, i == 0, dom);
         i++;
     }
 
