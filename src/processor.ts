@@ -1,3 +1,4 @@
+import { processFigures } from "./subprocessors/figures";
 import { processFootnoteReferences, processFootnotes } from "./subprocessors/footnotes";
 import { processTablesOfContents } from "./subprocessors/toc";
 
@@ -82,6 +83,7 @@ let parse = (contents: Element): Element =>
 {
     let dom: HTMLElement = contents.cloneNode(true) as any;
     processTextRuns(dom);
+    processFigures(dom);
     processTablesOfContents(dom);
 
     let i = 0;
