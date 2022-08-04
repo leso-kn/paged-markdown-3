@@ -21,7 +21,7 @@ function postProcessTablesOfContents(dom: HTMLElement)
             let href = li.children[0] && li.children[0].getAttribute('href');
             if (href && href.startsWith('#'))
             {
-                let target = document.querySelector(href);
+                let target = document.getElementById(href.substring(1));
                 if (!target) continue;
 
                 let targetPage = findAncestorWithClass(target, 'pagedjs_page');
