@@ -1,5 +1,6 @@
 import { processFigures } from "./subprocessors/figures";
 import { processFootnoteReferences, processFootnotes } from "./subprocessors/footnotes";
+import { processTables } from "./subprocessors/tables";
 import { processTablesOfContents } from "./subprocessors/toc";
 
 function processPageBreak(paragraphEl, direct = false, dom: HTMLElement)
@@ -84,6 +85,7 @@ let parse = (contents: Element): Element =>
     let dom: HTMLElement = contents.cloneNode(true) as any;
     processTextRuns(dom);
     processFigures(dom);
+    processTables(dom);
     processTablesOfContents(dom);
 
     let i = 0;
