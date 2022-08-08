@@ -22,6 +22,13 @@ body {
     text-align: justify;
 }
 
+.pmd-scroll-keeper {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding-bottom: calc(100vh - 22px);
+}
+
 /* Page Numbers */
 .pagedjs_page[pnum-reset]
 {

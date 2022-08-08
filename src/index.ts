@@ -1,6 +1,7 @@
 import { Previewer } from 'pagedjs';
 import { parse } from './processor';
 import { postProcessTablesOfContents } from './subprocessors/toc';
+import { keepPageDimensions } from './util/scroll-state';
 
 let paged = new Previewer();
 let observeLock = true;
@@ -21,15 +22,18 @@ let render = async () =>
 {
 	if (observeLock) return;
 	observeLock = true;
-
+	
 	// Process Contents
 	let contents = parse(markdown_input).innerHTML;
 
 	// Move Line Mappings
+	markdown_input.parentNode.appendChild(markdown_input);
 	for (let el of markdown_input.children)
 	{
 		if (el.classList && el.classList.contains('code-line'))
 		{ el.classList.remove('code-line'); }
+		if (el.hasAttribute('data-line'))
+		{ el.removeAttribute('data-line'); }
 	}
 
 	// Move Headline IDs
@@ -65,6 +69,7 @@ let render = async () =>
 
 	await postProcessTablesOfContents(preview);
 
+	keepPageDimensions(preview);
 	console.log("Rendered", flow.total, "pages.");
 	observeLock = false;
 }
