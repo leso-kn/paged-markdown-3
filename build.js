@@ -13,6 +13,13 @@ tasks
         log('tsc', dest);
 
         execSync(__dirname + '/node_modules/.bin/spack');
+
+        // Patch footnote mapping
+        let patch = 'area = node.closest(".pagedjs_page_content");'
+        fs.writeFileSync(dest,
+            fs.readFileSync(dest).toString()
+            .replace(patch, patch+'\n' + ' '
+            .repeat(16) + 'if (!area) return;'));
     }],
 
     // SCSS
