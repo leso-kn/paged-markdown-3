@@ -1,0 +1,46 @@
+/* Page Layout */
+@page
+{
+    margin: 2.5cm 3.5cm 2.0cm 2.5cm;
+
+    line-height: 1.5;
+    font-size: 12pt;
+    size: A4;
+}
+
+/* Footer Information */
+@page {
+    @bottom-center {
+        content: var(--page-number)
+    }
+
+    @footnote {
+        border-top: 1px solid rgba(127, 127, 127, 0.36);
+        margin-top: 1mm;
+        padding-top: 1mm;
+        float: bottom;
+    }
+}
+
+h1 ~ h1
+{
+    margin-top: 1cm;
+}
+
+a[href]
+{
+    color: #27c;
+}
+
+.caption
+{
+    color: gray;
+}
+
+/* Two-Pane */
+col-2
+{
+    display: block;
+    columns: 2;
+    column-gap: 2em;
+}
