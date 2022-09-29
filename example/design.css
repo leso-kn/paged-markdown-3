@@ -29,7 +29,7 @@ h1 ~ h1
 
 a[href]
 {
-    color: #295;
+    color: #27c;
 }
 
 .caption
@@ -45,7 +45,10 @@ col-2
     column-gap: 2em;
 }
 
-/* Front Page */
+/*
+ *  Complex Front Page Example
+ */
+
 .pagedjs_page:nth-child(1) .pagedjs_page_content > div
 {
     display: flex;
@@ -78,7 +81,7 @@ col-2
 
 .pagedjs_page:nth-child(1) pre code
 {
-    font-family: Calibri;
+    font-family: Calibri, serif;
     font-weight: 600;
     font-size: 1.7em;
     line-height: 1.5;
@@ -91,7 +94,7 @@ col-2
     margin: 0 auto;
     margin-bottom: 2cm;
 
-    font-family: Calibri;
+    font-family: Calibri, serif;
     font-weight: 600;
     font-size: 1.2em;
 }
@@ -101,3 +104,5 @@ col-2
     white-space: pre;
     margin: .5em 0;
 }
+
+/* * */
