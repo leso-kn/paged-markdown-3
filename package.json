@@ -1,6 +1,6 @@
 {
   "name": "paged-markdown-3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Document format for scientific writing based on Markdown.",
   "main": "dist/paged.js",
   "scripts": {
