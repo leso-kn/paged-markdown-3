@@ -1,5 +1,0 @@
-Es ist möglich, DOM Elemente in der Markdown Vorschau von VScode zu verschieben.
-
-Ergebnis: VScode verknüpft beim Scrollen zuverlässig Source Code Ausschnitte mit den dazugehörigen gerenderten Elementen.
-
-Schlussfolgerung: Es ist möglich mehrere Elemente in Seiten zu unterteilen, so lange ausreichend viele Elemente _verschoben_ (nicht gesplittet/neu-erzeugt) werden.
