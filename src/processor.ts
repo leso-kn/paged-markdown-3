@@ -1,3 +1,8 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
+
 import { processFigures } from "./subprocessors/figures";
 import { processFootnoteReferences, processFootnotes } from "./subprocessors/footnotes";
 import { processTables } from "./subprocessors/tables";

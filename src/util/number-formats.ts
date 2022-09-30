@@ -1,3 +1,7 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
 
 // Source: https://stackoverflow.com/a/9083076
 function romanize (num)

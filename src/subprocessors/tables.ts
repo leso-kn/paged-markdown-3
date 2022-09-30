@@ -1,3 +1,7 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
 
 function processTables(dom: HTMLElement)
 {

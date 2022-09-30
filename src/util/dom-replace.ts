@@ -1,7 +1,9 @@
 /*
- *  Source: https://stackoverflow.com/a/1444893
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
  */
 
+// Source: https://stackoverflow.com/a/1444893
 function replaceInElement(element, find, replace, offset = 0)
 {
     // iterate over child nodes in reverse, as replacement may increase
@@ -22,6 +24,7 @@ function replaceInElement(element, find, replace, offset = 0)
     }
 }
 
+// Source: https://stackoverflow.com/a/1444893
 function replaceInText(text, find, replace, offset = 0)
 {
     let match;
