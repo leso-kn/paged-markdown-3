@@ -16,13 +16,13 @@ let observeLock = true;
 
 //
 
-let markdown_input = document.body.children[0];
+let markdownInput = document.body.children[0];
 let preview = document.createElement('div');
 	preview.classList.add('pmd-preview');
     document.body.appendChild(preview);
 
 // Support Browser Preview
-if (!markdown_input.classList.contains('markdown-body')) { markdown_input = document.body; }
+if (!markdownInput.classList.contains('markdown-body')) { markdownInput = document.body; }
 
 //
 
@@ -32,11 +32,11 @@ let render = async () =>
 	observeLock = true;
 	
 	// Process Contents
-	let contents = parse(markdown_input).innerHTML;
+	let contents = parse(markdownInput).innerHTML;
 
 	// Move Line Mappings
-	markdown_input.parentNode.appendChild(markdown_input);
-	for (let el of markdown_input.children)
+	markdownInput.parentNode.appendChild(markdownInput);
+	for (let el of markdownInput.children)
 	{
 		if (el.classList && el.classList.contains('code-line'))
 		{ el.classList.remove('code-line'); }
@@ -45,7 +45,7 @@ let render = async () =>
 	}
 
 	// Move Headline IDs
-	for (let el of markdown_input.querySelectorAll('h1, h2, h3, h4, h5, h6, h7, h8, h9'))
+	for (let el of markdownInput.querySelectorAll('h1, h2, h3, h4, h5, h6, h7, h8, h9'))
 	{
 		el.removeAttribute('id');
 	}
@@ -54,24 +54,24 @@ let render = async () =>
 	let flow = await paged.preview(contents, [], preview);
 
 	// Page Numbers
-	let pnum_style = 'none';
+	let pnumStyle = 'none';
 	let i = 0;
 	for (let page of preview.querySelectorAll('.pagedjs_page'))
 	{
 		i++;
-		let pnum_def = page.getElementsByTagName('pnums')[0];
-		if (pnum_def)
+		let pnumDef = page.getElementsByTagName('pnums')[0];
+		if (pnumDef)
 		{
-			pnum_style = pnum_def.getAttribute('s');
+			pnumStyle = pnumDef.getAttribute('s');
 
-			if (pnum_def.hasAttribute('reset'))
+			if (pnumDef.hasAttribute('reset'))
 			{
 				page.setAttribute('pnum-reset', '');
 				i = 1;
 			}
 		}
 
-		page.setAttribute('pnum-style', pnum_style);
+		page.setAttribute('pnum-style', pnumStyle);
 		page.setAttribute('pnum-computed', i.toString());
 	}
 
@@ -117,7 +117,7 @@ paged.polisher.add(...[pmdPath + '/logic.css', 'design.css']).then(() =>
 });
 
 // Watch Changes
-new MutationObserver(render).observe(markdown_input,
+new MutationObserver(render).observe(markdownInput,
 {
 	subtree: true,
 	characterData: true,
