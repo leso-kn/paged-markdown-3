@@ -8,6 +8,9 @@ import { parse } from './processor';
 import { postProcessTablesOfContents } from './subprocessors/toc';
 import { keepPageDimensions } from './util/scroll-state';
 
+let pmdPath = (document.currentScript as HTMLScriptElement).src;
+    pmdPath = pmdPath.substring(0,pmdPath.lastIndexOf('/'));
+
 let paged = new Previewer();
 let observeLock = true;
 
@@ -100,12 +103,12 @@ paged.polisher.setup = function() {
 // CSS
 let previewStyle = document.createElement('link');
 previewStyle.rel = 'stylesheet';
-previewStyle.href = 'dist/preview.css';
+previewStyle.href = pmdPath + '/preview.css';
 document.head.appendChild(previewStyle);
 
 paged.polisher.setup();
 paged.handlers = paged.initializeHandlers();
-paged.polisher.add(...['dist/logic.css', 'design.css']).then(() =>
+paged.polisher.add(...[pmdPath + '/logic.css', 'design.css']).then(() =>
 {
 	// Init
 	observeLock = false;
