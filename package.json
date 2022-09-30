@@ -1,15 +1,16 @@
 {
   "name": "paged-markdown-3",
   "version": "0.1.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "Document format for scientific writing based on Markdown.",
+  "main": "dist/paged.js",
   "scripts": {
     "build": "node build.js",
-    "dev": "node build.js -w"
+    "dev": "node build.js -w",
+    "publish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leso-kn/paged-markdown.git"
+    "url": "git+https://github.com/leso-kn/paged-markdown-3.git"
   },
   "keywords": [
     "markdown",
@@ -18,18 +19,18 @@
     "paper"
   ],
   "author": "Lesosoftware",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leso-kn/paged-markdown/issues"
+    "url": "https://github.com/leso-kn/paged-markdown-3/issues"
   },
-  "homepage": "https://github.com/leso-kn/paged-markdown#readme",
+  "homepage": "https://github.com/leso-kn/paged-markdown-3#readme",
   "devDependencies": {
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.183",
-    "@types/node": "^17.0.33",
-    "buildtool.js": "^1.0.0-r1",
+    "@types/node": "^18.7.23",
+    "buildtool.js": "^1.0.1",
     "md5-file": "^5.0.0",
-    "sass": "^1.52.3"
+    "sass": "^1.55.0"
   },
   "dependencies": {
     "pagedjs": "^0.3.5"
