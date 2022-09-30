@@ -1,3 +1,8 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
+
 import { formatNumber } from "../util/number-formats";
 import { findAncestorWithClass } from "../util/selectors";
 

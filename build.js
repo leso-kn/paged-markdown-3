@@ -1,3 +1,8 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
+
 const { tasks, log, debug } = require('buildtool.js');
 const fs = require('fs');
 const path = require('path');

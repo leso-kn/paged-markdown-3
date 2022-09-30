@@ -1,3 +1,8 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
+
 let scrollKeeper = document.createElement('div');
 
 scrollKeeper.setAttribute('class', 'pmd-scroll-keeper');

@@ -1,3 +1,8 @@
+/*
+ *  Paged Markdown 3
+ *  Lesosoftware 2022
+ */
+
 import { replaceInElement } from "../util/dom-replace";
 
 const footNoteNumbers = '⁰¹²³⁴⁵⁶⁷⁸⁹';
