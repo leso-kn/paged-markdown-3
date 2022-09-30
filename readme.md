@@ -33,7 +33,7 @@ To interact with Paged Markdown 3 documents, a Markdown-capable text editor is r
 
    Page 2
 
-   <script src="https://unpkg.com/paged-markdown-3"></script>
+   <script src="https://unpkg.com/paged-markdown-3/dist/paged.js"></script>
    ```
 3. Open the Markdown-preview of your editor.  
    You should see your contents rendered into pages (if not you may need to [enable Javascript](#preview-security-warnings)).  
