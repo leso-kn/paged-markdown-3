@@ -81,4 +81,4 @@ Paged Markdown automatically assigns `id`s to any image with a text description 
 
 </col-2>
 
-<script src="dist/paged.js"></script>
+<script src="../dist/paged.js"></script>
