@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This project has recently moved to [codeberg.org](https://codeberg.org/leso-kn/paged-markdown-3).
+
 [![npm version](https://img.shields.io/npm/v/paged-markdown-3)](https://www.npmjs.com/package/paged-markdown-3) [![Example Document](https://img.shields.io/static/v1?label=Example&message=View%20in%20Browser&color=blueviolet)](https://lesosoftware.com/paged-markdown-3-example.pdf)
 
 # Paged Markdown 3
